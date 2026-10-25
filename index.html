@@ -1,37 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Priscilla Pan</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #faf7f2;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #2b2b2b;
-      text-align: center;
-    }
-    .wrap { padding: 2rem; }
-    h1 {
-      font-weight: 600;
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      color: #6b6b6b;
-      font-size: 1rem;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Priscilla Pan — Senior Product Manager &amp; Builder</title>
+<meta name="description" content="Priscilla Pan is a senior product manager in San Francisco who loves bringing products from 0 to 1, and builds apps like Postcard Press on the side.">
+<link rel="canonical" href="https://priscillapan.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://priscillapan.com/">
+<meta property="og:title" content="Priscilla Pan — Senior Product Manager & Builder">
+<meta property="og:description" content="Senior PM in San Francisco who loves bringing products from 0 to 1. Builder of Postcard Press, Petal Press, Mini Print, and Lucky Findings.">
+<meta property="og:image" content="https://priscillapan.com/assets/site/carousel/7.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/site/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/site/apple-touch-icon.png">
+<link rel="preload" as="image" href="/assets/site/carousel/7.jpg">
+<style>
+*{box-sizing:border-box}
+:root{--ink:#0a0a0a;--bg:#fafaf7;--accent:#ff4a1c;--mono:ui-monospace,"SF Mono",Menlo,monospace;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.pill{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 14px;border:1.2px solid var(--ink);border-radius:999px;font-size:11px;font-weight:500;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;background:transparent;color:var(--ink);transition:background .15s,color .15s}
+.pill:hover{background:var(--ink);color:#fff}
+.pill.filled{background:var(--ink);color:#fff}
+.pill.filled:hover{background:var(--accent);border-color:var(--accent)}
+.pill.sm{height:24px;padding:0 11px;font-size:10px}
+nav{display:flex;align-items:center;gap:16px;padding:22px 0;flex-wrap:wrap}
+.mark{font-weight:800;font-size:15px;letter-spacing:-.03em}
+.icon{width:32px;height:32px;border:1.2px solid var(--ink);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--ink);transition:background .15s,color .15s}
+.icon:hover{background:var(--ink);color:#fff}
+.icon.filled{background:var(--ink);color:#fff}
+.icon.filled:hover{background:var(--accent);border-color:var(--accent)}
+.nav-mid{flex:1;display:flex;justify-content:center;gap:6px}
+.nav-right{display:flex;gap:6px}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding:clamp(48px,9vw,110px) 0 clamp(40px,6vw,72px)}
+h1{margin:0;font-size:clamp(44px,7.2vw,88px);font-weight:900;line-height:.88;letter-spacing:-.065em}
+h1 .dot{color:var(--accent)}
+h1 .l{display:inline-block;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+h1 .l:hover{transform:translateY(-.12em) rotate(-6deg)}
+.tag{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline}
+.tag b{font-size:clamp(15px,1.6vw,19px);font-weight:700;letter-spacing:-.01em;text-transform:uppercase}
+.meta{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+.postmark{width:150px;height:150px;flex-shrink:0;position:relative;transform:rotate(-8deg)}
+.postmark svg.ring{width:100%;height:100%;animation:spin 18s linear infinite}
+.postmark .c{position:absolute;inset:34px;border:1.2px solid var(--ink);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);font-weight:900;letter-spacing:-.05em;line-height:.9}
+.postmark .c b{font-size:30px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.label{font-size:13px;font-weight:800;letter-spacing:-.01em;text-transform:uppercase}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px;padding:36px 0 64px;border-top:1px solid var(--ink)}
+.about p{margin:0 0 14px;font-size:clamp(17px,1.7vw,21px);line-height:1.45;letter-spacing:-.015em;max-width:680px;text-wrap:pretty}
+.about p:last-child{margin:0}
+.about p.lead{font-size:clamp(20px,2.2vw,27px);font-weight:700;letter-spacing:-.025em;line-height:1.25;margin-bottom:24px}
+.about p.ow-line{font-size:14px;opacity:.7}
+.bl{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.stamp{position:relative;display:inline-block;margin-top:22px;background:#fff;padding:7px;box-shadow:0 6px 16px -6px rgba(0,0,0,.3)}
+.stamp::before,.stamp::after{content:"";position:absolute;width:64px;height:20px;background:repeating-linear-gradient(90deg,oklch(0.88 0.07 30 / .85) 0 7px,oklch(0.93 0.05 30 / .85) 7px 14px);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.stamp::before{top:-9px;left:-18px;transform:rotate(-32deg)}
+.stamp::after{bottom:-8px;right:-18px;transform:rotate(-32deg)}
+.me{display:block;width:100%;max-width:160px;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+.apps{padding:36px 0 72px;border-top:1px solid var(--ink)}
+.apps-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px}
+.featured{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);border:1.2px solid var(--ink);border-radius:14px;overflow:hidden;background:#fff;margin-bottom:16px;cursor:pointer;transition:box-shadow .2s,transform .2s}
+.featured:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
+.featured .shot{position:relative;min-height:340px;border-right:1.2px solid var(--ink)}
+.featured .body{padding:28px;display:flex;flex-direction:column;gap:14px}
+.app-name{font-size:30px;font-weight:900;letter-spacing:-.045em;line-height:1}
+.app-line{font-size:16px;line-height:1.45;letter-spacing:-.01em}
+.press{font-size:11px;opacity:.7;display:flex;align-items:center;gap:6px}
+.press a{text-decoration:underline;text-underline-offset:3px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.deck{position:absolute;inset:0;background:#f4f1ea;overflow:hidden}
+.deck img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
+.deck img.on{opacity:1}
+.minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.mini-app{display:flex;align-items:center;gap:14px;border:1.2px solid var(--ink);border-radius:14px;background:#fff;padding:14px}
+.ico{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#fff;overflow:hidden;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.ico img{width:150%;height:150%;object-fit:contain;image-rendering:pixelated}
+.mini-app:hover .ico{transform:rotate(-10deg) scale(1.08)}
+.mi{flex:1;min-width:0}
+.mn{font-size:17px;font-weight:800;letter-spacing:-.03em}
+.ml{font-size:13px;line-height:1.4;opacity:.75;margin-top:2px}
+footer{border-top:1px solid var(--ink);padding:40px 0 48px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
+footer .big{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-.05em;line-height:1;overflow-wrap:anywhere}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s cubic-bezier(.2,.7,.3,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.postmark svg.ring{animation:none}}
+@media (max-width:820px){.nav-mid{display:none}.about{grid-template-columns:1fr}.featured{grid-template-columns:1fr}.featured .shot{border-right:0;border-bottom:1.2px solid var(--ink);min-height:240px}.minis{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>New site coming soon</h1>
-    <p>Rebuilding this page &mdash; check back shortly.</p>
-  </div>
+<div class="wrap">
+<nav>
+<a class="mark" href="/">Priscilla Pan</a>
+<div class="nav-mid"><a class="pill" href="#about">About</a><a class="pill" href="#apps">Apps</a><a class="pill" href="#contact">Contact</a></div>
+<div class="nav-right"><a class="icon" href="https://www.linkedin.com/in/priscilla-pan/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.55v4.92h-4z"/></svg></a><a class="icon" href="https://github.com/priscillabuilds" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a><a class="icon filled" href="mailto:hello@priscillapan.com" aria-label="Email"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a></div>
+</nav>
+<header class="hero">
+<div><h1 aria-label="Priscilla Pan."><span class="l">P</span><span class="l">r</span><span class="l">i</span><span class="l">s</span><span class="l">c</span><span class="l">i</span><span class="l">l</span><span class="l">l</span><span class="l">a</span> <span class="l">P</span><span class="l">a</span><span class="l">n</span><span class="l dot">.</span></h1>
+<div class="tag"><b>Senior Product Manager &amp; Builder</b><span class="meta">San Francisco</span></div></div>
+<div class="postmark" aria-hidden="true"><svg class="ring" viewBox="0 0 150 150"><defs><path id="circ" d="M75,75 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"></path></defs><text font-family="ui-monospace,Menlo,monospace" font-size="10.5" letter-spacing="2.4"><textPath href="#circ">PRODUCT MANAGER ✱ BUILDER ✱ SAN FRANCISCO ✱ </textPath></text></svg><div class="c"><b>SF</b></div></div>
+</header>
+<section class="about rv" id="about">
+<div><div class="label">About</div><div class="stamp"><img class="me" src="/assets/site/priscilla.jpg" alt="Priscilla Pan" width="160" height="200"></div></div>
+<div>
+<p class="lead">Hi, I’m Priscilla! I’m a senior PM who loves bringing products from 0 to 1.</p>
+<p>At <a class="bl" href="https://rzero.com/" target="_blank" rel="noopener">R-Zero</a>, I ship products that cut energy use 20% for enterprise customers. Before that, I built mobile and Apple Watch apps for connected women’s health products at <a class="bl" href="https://onewillow.com/" target="_blank" rel="noopener">Willow</a>.</p>
+<p>I’m a mechanical engineer by training, and I build apps on the side. My latest, <a class="bl" href="/postcard-press">Postcard Press</a>, was featured in <a class="bl" href="https://www.businessinsider.com/product-manager-san-francisco-used-claude-build-postcard-business-2026-5" target="_blank" rel="noopener">Business Insider</a> and has mailed 150+ postcards.</p>
+<p class="ow-line">Outside of work, you’ll find me 3D printing home decor, running through Golden Gate Park, and junk journaling.</p>
+</div>
+</section>
+<section class="apps rv" id="apps">
+<div class="apps-head"><div class="label">Apps I've shipped</div><div class="meta">04 projects</div></div>
+<article class="featured" onclick="if(!event.target.closest('a'))location.href='/postcard-press'">
+<div class="shot"><div class="deck" id="deck"><img src="/assets/site/carousel/1.jpg" alt="Postcard Press postcards" class="on"><img src="/assets/site/carousel/2.jpg" alt=""><img src="/assets/site/carousel/3.jpg" alt=""><img src="/assets/site/carousel/4.jpg" alt=""><img src="/assets/site/carousel/5.jpg" alt=""><img src="/assets/site/carousel/6.jpg" alt=""><img src="/assets/site/carousel/7.jpg" alt=""><img src="/assets/site/carousel/8.jpg" alt=""><img src="/assets/site/carousel/9.jpg" alt=""><img src="/assets/site/carousel/10.jpg" alt=""><img src="/assets/site/carousel/11.jpg" alt=""><img src="/assets/site/carousel/12.jpg" alt=""><img src="/assets/site/carousel/13.jpg" alt=""></div></div>
+<div class="body">
+<div class="app-name">Postcard Press</div>
+<div class="app-line">Send a real postcard as easily as a text.</div>
+<div class="press">★ Featured in <a href="https://www.businessinsider.com/product-manager-san-francisco-used-claude-build-postcard-business-2026-5" target="_blank" rel="noopener">Business Insider</a></div>
+<div class="row"><a class="pill filled" href="/postcard-press">Read the case study →</a><a class="pill" href="https://postcard-press.com/" target="_blank" rel="noopener">Visit site ↗</a></div>
+</div>
+</article>
+<div class="minis"><article class="mini-app"><div class="ico"><img src="/assets/site/icon-petal.png" alt="Petal Press icon"></div><div class="mi"><div class="mn">Petal Press</div><div class="ml">Identify flowers and uncover their Victorian meanings.</div></div><a class="pill sm" href="https://petal-press.app/" target="_blank" rel="noopener">Visit ↗</a></article><article class="mini-app"><div class="ico"><img src="/assets/site/icon-mini.png" alt="Mini Print icon"></div><div class="mi"><div class="mn">Mini Print</div><div class="ml">Turn photos into polaroid-style prints.</div></div><a class="pill sm" href="https://miniprint.app/" target="_blank" rel="noopener">Visit ↗</a></article><article class="mini-app"><div class="ico"><img src="/assets/site/icon-lucky.png" alt="Lucky Findings icon"></div><div class="mi"><div class="mn">Lucky Findings</div><div class="ml">Complete 5-minute creative quests that get you outside.</div></div><a class="pill sm" href="http://luckyfindings.lovable.app/" target="_blank" rel="noopener">Visit ↗</a></article></div>
+</section>
+<footer id="contact" class="rv">
+<div><div class="meta" style="margin-bottom:10px">Say hi</div><a class="big" href="mailto:hello@priscillapan.com">hello@priscillapan.com</a></div>
+<div class="row" style="margin:0"><a class="icon" href="https://www.linkedin.com/in/priscilla-pan/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.55v4.92h-4z"/></svg></a><a class="icon" href="https://github.com/priscillabuilds" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a><a class="icon filled" href="mailto:hello@priscillapan.com" aria-label="Email"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a></div>
+</footer>
+</div>
+<script>
+document.documentElement.classList.add('js');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')),2500);
+(function(){const d=document.getElementById('deck');if(!d||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const f=[...d.querySelectorAll('img')];let i=0;
+function step(){f[i].classList.remove('on');i=(i+1)%f.length;f[i].classList.add('on');setTimeout(step,i===6||i===0?1600:450);}
+setTimeout(step,1200);})();
+</script>
 </body>
 </html>
