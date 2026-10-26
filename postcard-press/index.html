@@ -40,11 +40,11 @@ nav{display:flex;align-items:center;gap:16px;padding:22px 0;flex-wrap:wrap}
 .crumb{display:flex;gap:8px;align-items:center;margin-bottom:26px}
 h1{margin:0;font-size:clamp(52px,8vw,104px);font-weight:900;line-height:.88;letter-spacing:-.065em}
 h1 span{color:var(--accent)}
-.lede{margin:24px 0 0;font-size:clamp(20px,2.2vw,28px);font-weight:700;line-height:1.2;letter-spacing:-.025em;max-width:600px;text-wrap:pretty}
+.lede{margin:40px 0 0;font-size:clamp(20px,2.2vw,28px);font-weight:700;line-height:1.2;letter-spacing:-.025em;max-width:600px;text-wrap:pretty}
 .hero-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px;align-items:center}
-.press{font-size:12px;opacity:.75}
+.press{font-size:12px;opacity:.75;display:inline-flex;align-items:center;gap:6px}
 .press a{text-decoration:underline;text-underline-offset:3px}
-section.block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px 48px;padding:40px 0 56px;border-top:1px solid var(--ink)}
+section.block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px 48px;padding:40px 0 56px}
 .num{font-family:var(--mono);font-size:10px;letter-spacing:.12em;opacity:.55;margin-bottom:6px}
 .prose p{margin:0 0 16px;font-size:clamp(17px,1.6vw,20px);line-height:1.5;letter-spacing:-.012em;max-width:680px;text-wrap:pretty}
 .prose p:last-child{margin-bottom:0}
@@ -60,21 +60,21 @@ section.block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap
 .uses li b{font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
 .uses li b::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
 @media (max-width:600px){.uses li{grid-template-columns:1fr}}
-.pics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:10px}
+.pics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
 .pics figure{margin:0}
 .pics img{width:100%;aspect-ratio:4/5;object-fit:cover;border:1.2px solid var(--ink);border-radius:14px;display:block;background:#f4efe6}
 .pics figcaption{margin-top:8px}
-.vals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
-.vals div{border:1.2px solid var(--ink);border-radius:12px;padding:16px;background:#fff}
-.vals b{display:block;font-size:26px;font-weight:900;letter-spacing:-.05em}
-.vals span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
-.bi{border-top:1px solid var(--ink);padding:36px 0}
-.bi a{display:flex;flex-direction:column;gap:8px}
-.bi b{font-size:clamp(22px,3vw,34px);font-weight:900;letter-spacing:-.04em;line-height:1.1}
-.bi a:hover b{color:var(--accent)}
+.val-row{display:flex;gap:24px;align-items:flex-start;margin-top:22px}
+.val-row .uses{flex:1;margin-top:0}
+.demo{margin:0;width:140px;flex-shrink:0}
+.demo img{display:block;width:100%;height:auto;border:1.2px solid var(--ink);border-radius:12px}
+.demo figcaption{margin-top:8px;line-height:1.4}
+@media (max-width:600px){.val-row{flex-direction:column}}
+.prose a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.bi-logo{width:14px;height:14px;border-radius:3px;flex-shrink:0}
 .next{border-top:1px solid var(--ink);padding:40px 0 48px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
 .next .big{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-.05em;line-height:1;overflow-wrap:anywhere}
-@media (max-width:860px){.nav-mid{display:none}section.block{grid-template-columns:1fr}.pics,.vals{grid-template-columns:1fr}}
+@media (max-width:860px){.nav-mid{display:none}section.block{grid-template-columns:1fr}.pics{gap:8px}.pics img{border-radius:8px}.pics figcaption{font-size:8px;letter-spacing:.06em}}
 </style>
 </head>
 <body>
@@ -87,16 +87,17 @@ section.block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap
 <header class="hero">
 <div class="crumb"><a class="pill sm" href="/#apps">← All apps</a><span class="meta">Case study</span></div>
 <h1>Postcard Press<span>.</span></h1>
+<div class="hero-links"><a class="pill filled" href="https://postcard-press.com/" target="_blank" rel="noopener">Try it ↗&#xFE0E;</a><span class="press"><img class="bi-logo" src="/assets/site/logo-bi.png" alt=""> Featured in <a href="https://www.businessinsider.com/product-manager-san-francisco-used-claude-build-postcard-business-2026-5" target="_blank" rel="noopener">Business Insider</a></span></div>
 <p class="lede">Send a postcard as easily as a text.</p>
-<div class="hero-links"><a class="pill filled" href="https://postcard-press.com/" target="_blank" rel="noopener">Try it ↗</a><span class="press">★ Featured in <a href="https://www.businessinsider.com/product-manager-san-francisco-used-claude-build-postcard-business-2026-5" target="_blank" rel="noopener">Business Insider</a></span></div>
+<div class="pics"><figure><img src="/assets/site/postcard-ui.jpg" alt="Postcard Press app"><figcaption class="meta">01 · The app</figcaption></figure><figure><img src="/assets/site/postcard-upload.jpg" alt="Uploading a photo" style="object-position:top"><figcaption class="meta">02 · Add a photo, message, and address</figcaption></figure><figure><img src="/assets/site/postcard-real.jpg" alt="A real Postcard Press postcard"><figcaption class="meta">03 · Postcard is mailed and delivered</figcaption></figure></div>
 </header>
 <section class="block">
 <div><div class="num">01</div><div class="label">The problem</div></div>
-<div class="prose"><p>I love sending and receiving physical mail, but I almost never send it. You have to buy a card, write it, get a stamp, and find a blue mailbox, and with that much friction I usually just don't do it.</p><p class="pull">So I built the friction away: an app that lets you send a postcard as easily as a text.</p></div>
+<div class="prose"><p>I love sending and receiving physical mail, but I almost never send it. Writing, buying a stamp, and finding a blue mailbox is often too much friction.</p><p class="pull">So I built Postcard Press.</p><p>I wanted an easier way to stay in touch with friends, so I built the MVP in one night with Claude Code, the PostGrid API, and Stripe. Just upload a photo, write a note, and add an address, and Postcard Press prints and mails a physical postcard for you.</p></div>
 </section>
 <section class="block">
 <div><div class="num">02</div><div class="label">Who it's for</div></div>
-<div class="prose"><p>Postcard Press keeps long-distance friends and relationships connected. It's for anyone who wants to send something real to someone far away, without hunting for stamps or a mailbox.</p><ul class="uses"><li><b>Travelers</b><span>Send memories from the trip back home, right from your phone.</span></li><li><b>Long-distance friends &amp; relationships</b><span>Stay in each other's lives with something you can hold.</span></li></ul></div>
+<div class="prose"><p>Postcard Press keeps long-distance friends and relationships connected. It's for anyone who wants to send something real to someone far away, without hunting for stamps or a mailbox. Common users include:</p><ul class="uses"><li><b>Travelers</b><span>Send photos from a trip to friends, right from your phone.</span></li><li><b>Long-distance friends &amp; relationships</b><span>Stay in each other's lives with mail that feels more thoughtful than a text.</span></li></ul></div>
 </section>
 <section class="block">
 <div><div class="num">03</div><div class="label">Competitors</div></div>
@@ -109,16 +110,14 @@ section.block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap
 </section>
 <section class="block">
 <div><div class="num">04</div><div class="label">Validation</div></div>
-<div class="prose"><p>First, I built a prototype with Claude Code, hooked up to a print-and-mail API. Before making it production-ready, I wanted to know if it was worth building. Here's what I did:</p>
-<ul class="uses"><li><b>Demoed it in person</b><span>Showed the prototype to lots of people at ProductCon, a product manager conference.</span></li><li><b>Set up a waitlist</b><span>Built with Tally; it collected about 100 emails.</span></li><li><b>Shared the build online</b><span>Organic video posts reached 100K+ people.</span></li></ul>
-<div class="vals"><div><b>ProductCon</b><span>In-person demos</span></div><div><b>~100</b><span>Waitlist signups</span></div><div><b>100K+</b><span>Organic reach</span></div></div></div>
+<div class="prose"><p>First, I built an MVP prototype with Claude Code, hooked up to PostGrid's print-and-mail API. Before making it production-ready, I wanted to validate the idea. Here's what I did:</p>
+<div class="val-row"><ul class="uses"><li><b>Demoed it in person</b><span>Gave a demo to 10+ people at ProductCon, a product manager conference in SF.</span></li><li><b>Shared the build online</b><span>Organic video posts reached 100K+ people on Instagram.</span></li><li><b>Set up a waitlist</b><span>Collected 100+ emails (built with Tally).</span></li></ul>
+<figure class="demo"><img src="/assets/site/productcon-demo.jpg" alt="Priscilla holding up the Postcard Press prototype on her phone at ProductCon" loading="lazy" width="140" height="187"><figcaption class="meta">Demoing at ProductCon</figcaption></figure></div></div>
 </section>
 <section class="block">
-<div><div class="num">05</div><div class="label">My solution</div></div>
-<div class="prose"><p>You upload a photo, write a note, and add an address, and Postcard Press prints and mails a real postcard. I built the first version in one night with Claude Code and the PostGrid API, then added Stripe so people could pay.</p></div>
-<div class="pics full"><figure><img src="/assets/site/postcard-ui.jpg" alt="Postcard Press app" loading="lazy"><figcaption class="meta">01 · The app</figcaption></figure><figure><img src="/assets/site/postcard-upload.jpg" alt="Uploading a photo" style="object-position:top" loading="lazy"><figcaption class="meta">02 · Add a photo, write a note</figcaption></figure><figure><img src="/assets/site/postcard-real.jpg" alt="A real Postcard Press postcard" loading="lazy"><figcaption class="meta">03 · What shows up in the mail</figcaption></figure></div>
+<div><div class="num">05</div><div class="label">Where it is now</div></div>
+<div class="prose"><p>Postcard Press is live and has mailed 150+ postcards to keep people in touch.</p><p>It was also featured in Business Insider, and you can <a href="https://www.businessinsider.com/product-manager-san-francisco-used-claude-build-postcard-business-2026-5" target="_blank" rel="noopener">read the story here ↗&#xFE0E;</a></p></div>
 </section>
-<section class="bi"><a href="https://www.businessinsider.com/product-manager-san-francisco-used-claude-build-postcard-business-2026-5" target="_blank" rel="noopener"><span class="meta">Press</span><b>Read more about it in Business Insider ↗</b></a></section>
 <footer class="next" id="contact">
 <div><div class="meta" style="margin-bottom:10px">Say hi</div><a class="big" href="mailto:hello@priscillapan.com">hello@priscillapan.com</a></div>
 <a class="pill" href="/#apps">← Back to all apps</a>
